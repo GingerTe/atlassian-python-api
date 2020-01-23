@@ -1,11 +1,13 @@
 # coding: utf8
 import logging
+
+from atlassian.jira_core import JiraCore
 from .rest_client import AtlassianRestAPI
 
 log = logging.getLogger(__name__)
 
 
-class ServiceDesk(AtlassianRestAPI):
+class ServiceDesk(JiraCore):
 
     # Information actions
     def get_info(self):
